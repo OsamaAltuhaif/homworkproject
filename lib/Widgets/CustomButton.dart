@@ -26,17 +26,23 @@ class TuhaifButton extends StatelessWidget {
         Colors.green;
       },
       child: Container(
+        width: MediaQuery.of(context).size.width*0.5,
+        height: 40,
         padding: EdgeInsets.all(padding!),
         margin: EdgeInsets.all(margin!),
-        child: child,
         decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(color: Colors.deepPurple, spreadRadius: 2, blurRadius: 2, offset: Offset(-1, 0))
+          ],
           borderRadius: BorderRadius.circular(redus!),
           border: Border.all(
             style: BorderStyle.solid,
-            width: this.border!,
+            width: 2,
             color: Colors.blue,
           ),
         ),
+                child: child,
       ),
     );
   }
